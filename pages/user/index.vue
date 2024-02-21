@@ -1,5 +1,5 @@
 <template>
-    <Tutorial/>
+    <Nemvll/>
   </template>
   
   <script>
