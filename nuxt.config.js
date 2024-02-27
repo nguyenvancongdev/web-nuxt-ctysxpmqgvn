@@ -12,6 +12,12 @@ export default {
           chunkName: 'pages/user/home/index'
         },
         {
+          name: 'about',
+          path: '/about', // <--- change this
+          component: resolve(__dirname, 'pages/user/about/index.vue'),
+          chunkName: 'pages/user/about/index'
+        },
+        {
           name: 'login',
           path: '/login', // <--- change this
           component: resolve(__dirname, 'pages/user/login/index.vue'),
