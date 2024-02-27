@@ -1,11 +1,15 @@
 <template>
-    <body class="flex items-center justify-center page-container" style="background: #edf2f7;">
+    <body class="flex items-center justify-center" style="background: #edf2f7;">
     <!-- Create By Joker Banny -->
-    <body class="bg-white">
+    <body class="bg-white page-container">
     <!-- Header Navbar -->
     <UserLayoutHeaderNavbar />
+    <div class="w-full">
 
-    <nuxt/>
+        <div class="container">
+            <nuxt/>
+        </div>
+    </div>
 
     <!-- Footer -->
     
