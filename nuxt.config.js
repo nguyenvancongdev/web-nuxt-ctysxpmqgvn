@@ -1,7 +1,25 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
+  // router
+  router: {
+    extendRoutes(routes, resolve) {
+      return [
+        {
+          name: 'home',
+          path: '/', // <--- change this
+          component: resolve(__dirname, 'pages/user/home/index.vue'),
+          chunkName: 'pages/user/home/index'
+        },
+        {
+          name: 'login',
+          path: '/login', // <--- change this
+          component: resolve(__dirname, 'pages/user/login/index.vue'),
+          chunkName: 'pages/user/login/index'
+        },
+      ]
+    }
+  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
