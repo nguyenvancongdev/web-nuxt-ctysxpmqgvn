@@ -1,7 +1,7 @@
 <template>
-    <body class="flex items-center justify-center" style="background: #edf2f7;">
+    <body class="items-center justify-center" style="background: #edf2f7;">
     <!-- Create By Joker Banny -->
-    <body class="bg-white page-container">
+    <body class="bg-white page-container container mx-auto">
     <!-- Header Navbar -->
     <UserLayoutHeaderNavbar />
     <div class="w-full">
