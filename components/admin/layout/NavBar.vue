@@ -1,10 +1,7 @@
-<template>
-   <body class="text-gray-800 font-inter">
-    <AdminLayoutSideNav />
 
-    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-200 min-h-screen transition-all main">
-        <!-- navbar -->
-        <div class="py-2 px-6 bg-[#f8f4f3] flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+<template>
+      <!-- navbar -->
+      <div class="py-2 px-6 bg-[#f8f4f3] flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
             <button type="button" class="text-lg text-gray-900 font-semibold sidebar-toggle">
                 <i class="ri-menu-line"></i>
             </button>
@@ -184,15 +181,19 @@
             </ul>
         </div>
         <!-- end navbar -->
-
-      <!-- Content -->
-        <div class="p-6">
-            <nuxt/>
-        </div>
-      <!-- End Content -->
-    </main>
-   </body>
 </template>
-<style scoped>
-
-</style>
+<script>
+export default {
+  name: 'IndexPage',
+  data() {
+      return {
+        test: ''
+      };
+  },
+  methods: {
+    hanh(){
+        console.log('day la mixin')
+    },
+  },
+}
+</script>

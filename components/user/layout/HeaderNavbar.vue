@@ -26,15 +26,18 @@
           <a class="block rounded bg-blue-700 py-2 pl-3 pr-4 text-white md:bg-transparent md:p-0 md:text-blue-700" aria-current="page"><NuxtLink to="/">Trang Chủ</NuxtLink></a>
         </li>
         <li>
-          <a class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-            <NuxtLink to="/about">Về Chúng Tôi</NuxtLink>
-          </a>
+          <NuxtLink to="/about" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+           Về Chúng Tôi
+          </NuxtLink>
         </li>
         <li>
           <a href="#" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">Dịch Vụ</a>
         </li>
         <li>
           <a href="#" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">Liên Hệ</a>
+        </li>
+        <li>
+          <NuxtLink to="/admin/about" href="#" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">Admin</NuxtLink>
         </li>
       </ul>
     </div>

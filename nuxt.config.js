@@ -5,6 +5,7 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       return [
+        ...routes,
         {
           name: 'home',
           path: '/', // <--- change this
