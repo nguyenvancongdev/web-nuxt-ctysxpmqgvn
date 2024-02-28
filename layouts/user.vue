@@ -1,12 +1,12 @@
 <template>
     <body class="items-center justify-center" style="background: #edf2f7;">
     <!-- Create By Joker Banny -->
-    <body class="bg-white page-container container mx-auto">
+    <body class="bg-white page-container container mx-auto max-w-6xl">
     <!-- Header Navbar -->
     <UserLayoutHeaderNavbar />
-    <div class="w-full">
+    <div class="">
 
-        <div class="container">
+        <div class="">
             <nuxt/>
         </div>
     </div>
