@@ -23,10 +23,16 @@
     <div class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto" id="navbar-sticky">
       <ul class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium">
         <li>
-          <a class="block rounded bg-blue-700 py-2 pl-3 pr-4 text-white md:bg-transparent md:p-0 md:text-blue-700" aria-current="page"><NuxtLink to="/">Trang Chủ</NuxtLink></a>
+          <NuxtLink to="/"
+          :class="{'active': isRouteActive }"
+          class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+          >
+          Trang Chủ
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+          <NuxtLink to="/about" class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+          >
            Về Chúng Tôi
           </NuxtLink>
         </li>
@@ -61,3 +67,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.nuxt-link-exact-active {
+  color: rgb(29 78 216)
+}
+</style>
