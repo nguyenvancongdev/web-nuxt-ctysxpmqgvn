@@ -66,7 +66,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@ant-design-vue/nuxt'
+    'vuetify-nuxt-module'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
