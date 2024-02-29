@@ -1,7 +1,13 @@
 <template>
     <div>danh sach anh
 
-      <v-file-input label="File input"></v-file-input>
+      <v-file-input
+      accept="image/png, image/jpeg, image/bmp"
+      label="tai anh len"
+      v-model="chosenFile"
+      show-size
+      >
+    </v-file-input>
 
     </div>
 </template>
@@ -12,7 +18,8 @@ export default {
   layout: 'admin',
   data() {
       return {
-        test: ''
+        test: '',
+        chosenFile: null,
       };
   },
   // components: {
