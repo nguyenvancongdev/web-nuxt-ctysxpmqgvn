@@ -13,9 +13,11 @@
 </template>
 <script>
 // import {VFileInput} from 'vuetify-nuxt-module'
+import uploadFile from '@/mixins/uploadFile'
 export default {
   name: 'IndexPage',
   layout: 'admin',
+  mixins: [uploadFile],
   data() {
       return {
         test: '',

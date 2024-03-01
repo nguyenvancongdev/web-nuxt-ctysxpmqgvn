@@ -14,3 +14,4 @@ const firebaseConfig = {
 
   const db = getFirestore(firebase);
   export default db
+  
