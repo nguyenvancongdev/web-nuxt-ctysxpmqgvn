@@ -64,6 +64,10 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/vuetify',
   ],
+  vuetify: {
+    treeShake: true
+  },
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
