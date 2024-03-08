@@ -9,9 +9,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@firebase/storage": "^0.12.2",
     "@nuxtjs/vuetify": "^1.12.3",
     "core-js": "^3.25.3",
+    "firebase": "^10.8.1",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",

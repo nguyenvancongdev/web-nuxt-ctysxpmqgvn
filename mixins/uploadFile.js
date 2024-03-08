@@ -1,8 +1,9 @@
 import { getStorage, ref, uploadBytes } from "@firebase/storage";
-
+import { initializeApp } from "firebase/app";
+import {firebase} from '@/fb';
 const storage = getStorage();
 const storageRef = ref(storage, 'some-child');
-
+ 
 // 'file' comes from the Blob or File API
 
 
