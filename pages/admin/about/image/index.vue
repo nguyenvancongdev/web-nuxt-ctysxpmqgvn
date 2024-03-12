@@ -8,11 +8,13 @@
       show-size
       >
     </v-file-input>
-
+    <v-btn @click="update">update</v-btn>
     </div>
 </template>
 <script>
 // import {VFileInput} from 'vuetify-nuxt-module'
+import { ref, uploadBytes } from "firebase/storage";
+import { storage } from "@/fb"
 import uploadFile from '@/mixins/uploadFile'
 export default {
   name: 'IndexPage',
@@ -31,6 +33,14 @@ export default {
     hanh(){
         console.log('day la mixin')
     },
+    
+  update(){
+    console.log('rrrrr', this.chosenFile)
+    const storageRef = ref(storage, 'some-child');
+    uploadBytes(storageRef, this.chosenFile).then((snapshot) => {
+      console.log('update right !!', snapshot)
+    });
+  }
   },
 }
 </script>
