@@ -16,6 +16,7 @@
 import { ref, uploadBytes } from "firebase/storage";
 import { storage } from "@/fb"
 import uploadFile from '@/mixins/uploadFile'
+import { snapshotEqual } from "firebase/firestore";
 export default {
   name: 'IndexPage',
   layout: 'admin',
@@ -34,12 +35,14 @@ export default {
         console.log('day la mixin')
     },
     
-  update(){
-    console.log('rrrrr', this.chosenFile)
-    const storageRef = ref(storage, 'some-child');
-    uploadBytes(storageRef, this.chosenFile).then((snapshot) => {
-      console.log('update right !!', snapshot)
-    });
+    async update(){
+    if (this.chosenFile){
+      const imageref = ref(storage,`eme/${this.chosenFile.name}`);
+      uploadBytes(imageref, this.chosenFile).then((snapshot)=>{
+        console.log('snaop', snapshot)
+      })     
+ 
+    }
   }
   },
 }
