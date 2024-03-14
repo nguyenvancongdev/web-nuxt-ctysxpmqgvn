@@ -8,15 +8,17 @@
       show-size
       >
     </v-file-input>
+    
     <v-btn @click="update">update</v-btn>
+    <v-btn @click="consoUrl">geturl</v-btn>
+    
     </div>
 </template>
 <script>
 // import {VFileInput} from 'vuetify-nuxt-module'
-import { ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytes,getDownloadURL } from "firebase/storage";
 import { storage } from "@/fb"
 import uploadFile from '@/mixins/uploadFile'
-import { snapshotEqual } from "firebase/firestore";
 export default {
   name: 'IndexPage',
   layout: 'admin',
@@ -43,7 +45,13 @@ export default {
       })     
  
     }
-  }
+    },
+    consoUrl(){
+      const imageref = ref(storage,`eme/favicon.png`);
+      getDownloadURL(imageref).then(res => {
+        console.log('res', res)
+      })
+    },
   },
 }
 </script>
