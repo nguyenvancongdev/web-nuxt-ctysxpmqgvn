@@ -16,7 +16,7 @@
 </template>
 <script>
 // import {VFileInput} from 'vuetify-nuxt-module'
-import { ref, uploadBytes,getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes,getDownloadURL,deleteObject } from "firebase/storage";
 import { storage } from "@/fb"
 import uploadFile from '@/mixins/uploadFile'
 export default {
@@ -52,6 +52,14 @@ export default {
         console.log('res', res)
       })
     },
-  },
+    delete(){
+      const desertRef = ref(storage, 'images/desert.jpg');
+      deleteObject(desertRef).then(() => {
+  
+        }).catch((error) => {
+ 
+        });
+      }
+    },
 }
 </script>
