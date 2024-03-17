@@ -11,12 +11,14 @@
     
     <v-btn @click="update">update</v-btn>
     <v-btn @click="consoUrl">geturl</v-btn>
+    <v-btn @click="pageTokenExample">get list </v-btn>
+
     
     </div>
 </template>
 <script>
 // import {VFileInput} from 'vuetify-nuxt-module'
-import { ref, uploadBytes,getDownloadURL,deleteObject } from "firebase/storage";
+import { ref, uploadBytes,getDownloadURL,deleteObject, list } from "firebase/storage";
 import { storage } from "@/fb"
 import uploadFile from '@/mixins/uploadFile'
 export default {
@@ -59,7 +61,16 @@ export default {
         }).catch((error) => {
  
         });
-      }
     },
+    
+    async pageTokenExample(){
+      try {
+      const listRef = ref(storage, 'eme')
+      const firstPage = await list(listRef, { maxResults: 100 });
+      console.log('ffff')
+        console.log('firstPage', firstPage)
+      } catch ( err ) {console.log(err)}
+    },
+  }  
 }
 </script>
