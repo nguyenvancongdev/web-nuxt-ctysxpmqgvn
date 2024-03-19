@@ -64,15 +64,16 @@ export default {
   layout: 'user',
   methods: {
     handerClick(){
-      const eee = new GoogleAuthProvider();
-      try {
-        singInWithPopup(auth, eee).then((data) => {
-          console.log('data', data)
-        })
+      // const eee = new GoogleAuthProvider();
+      this.$auth.loginWith('google')
+    //  try {
+    //     singInWithPopup(auth, eee).then((data) => {
+    //       console.log('data', data)
+    //     })
 
-      } catch (err){
-        console.log('444', err)
-      }
+    //   } catch (err){
+    //     console.log('444', err)
+    //   } 
     
     },
   }  

@@ -75,5 +75,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  auth: {
+    strategies: {
+      google: {
+        clientId: 'project-684138343077'
+      },
+    }
   }
 }
