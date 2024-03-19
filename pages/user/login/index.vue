@@ -65,7 +65,8 @@ export default {
   methods: {
     handerClick(){
       // const eee = new GoogleAuthProvider();
-      this.$auth.loginWith('google')
+      // this.$auth.loginWith('google')
+      this.$auth.loginWith('google', { params: { prompt: "select_account" } })
     //  try {
     //     singInWithPopup(auth, eee).then((data) => {
     //       console.log('data', data)

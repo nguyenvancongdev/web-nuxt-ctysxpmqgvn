@@ -71,6 +71,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+  '@nuxtjs/auth'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -79,7 +81,7 @@ export default {
   auth: {
     strategies: {
       google: {
-        clientId: 'project-684138343077'
+        clientId: 'vuejs-demo-d773e'
       },
     }
   }
