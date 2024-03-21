@@ -58,7 +58,8 @@
 </template>
 <script>
 import { auth,provider } from '@/fb';
-import { singInWithPopup, GoogleAuthProvider,createUserWithEmailAndPassword } from "firebase/auth";
+import { singInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
+const providers = new GoogleAuthProvider();
 export default {
   name: 'Login',
   layout: 'user',
@@ -66,7 +67,7 @@ export default {
     handerClick(){
       // const eee = new GoogleAuthProvider();
       // this.$auth.loginWith('google')
-      // this.$auth.loginWith('google', { params: { prompt: "select_account" } })
+    //  this.$auth.loginWith('google', { params: { prompt: "select_account" } })
     //  try {
     //     singInWithPopup(auth, eee).then((data) => {
     //       console.log('data', data)
@@ -75,8 +76,13 @@ export default {
     //   } catch (err){
     //     console.log('444', err)
     //   } 
-    createUserWithEmailAndPassword(auth, 'congnv@gmail.com', 'eeeeee')
-    },
+    // createUserWithEmailAndPassword(auth, 'congnv@gmail.com', 'eeeeee')
+    // singInWithPopup(auth, providers).then((data) => {
+
+    // })
+    signInWithRedirect(auth, provider);
+
+    }
   }  
 }
 </script>
