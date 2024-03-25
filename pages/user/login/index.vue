@@ -66,14 +66,15 @@ export default {
   layout: 'user',
   methods: {
     async handerClick(){
-      try {
-        await signInWithPopup(auth, provider).then(res =>{
-          localStorage.setItem('key', 'login thanh cong');
-        }).catch(err)(console.log('fff', err));
+      // try {
+      //   await signInWithPopup(auth, provider).then(res =>{
+      //     localStorage.setItem('key', 'login thanh cong');
+      //   }).catch(err)(console.log('fff', err));
 
-      } catch (err){
-        console.log('err', err)
-      }
+      // } catch (err){
+      //   console.log('err', err)
+      // }
+      this.auth
 
     },
     logou(){

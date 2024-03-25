@@ -80,7 +80,7 @@ export default {
   auth: {
     strategies: {
       google: {
-        clientId: '684138343077-99n2720ti6qqgk5a3dgj0p7tdsgnfo6e.apps.googleusercontent.com'
+        clientId: '684138343077-bac360628l01drd94kp298pmjad78385.apps.googleusercontent.com'
       },
     }
   }
