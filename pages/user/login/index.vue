@@ -58,9 +58,7 @@
 </template>
 <script>
 import { auth,provider } from '@/fb';
-import { useRoute } from '@nuxtjs/composition-api'
-const router = useRoute()
-import { GoogleAuthProvider,signOut, signInWithRedirect, GithubAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider,signOut,signInWithPopup, signInWithRedirect, getRedirectResult, GithubAuthProvider } from "firebase/auth";
 const providers = new GoogleAuthProvider();
 const providerss = new GithubAuthProvider();
 export default {
@@ -69,8 +67,8 @@ export default {
   methods: {
     async handerClick(){
       try {
-        await signInWithRedirect(auth, providerss).then(res =>{
-          console.log('444', res)
+        await signInWithPopup(auth, provider).then(res =>{
+          localStorage.setItem('key', 'login thanh cong');
         }).catch(err)(console.log('fff', err));
 
       } catch (err){
