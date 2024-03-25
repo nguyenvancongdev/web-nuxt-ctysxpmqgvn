@@ -58,29 +58,22 @@
 </template>
 <script>
 import { auth,provider } from '@/fb';
-import { singInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
+import { GoogleAuthProvider, signInWithRedirect, GithubAuthProvider } from "firebase/auth";
 const providers = new GoogleAuthProvider();
+const providerss = new GithubAuthProvider();
 export default {
   name: 'Login',
   layout: 'user',
   methods: {
-    handerClick(){
-      // const eee = new GoogleAuthProvider();
-      // this.$auth.loginWith('google')
-    //  this.$auth.loginWith('google', { params: { prompt: "select_account" } })
-    //  try {
-    //     singInWithPopup(auth, eee).then((data) => {
-    //       console.log('data', data)
-    //     })
+    async handerClick(){
+      try {
+        await signInWithRedirect(auth, providerss).then(res =>{
+          console.log('444', res)
+        }).catch(err)(console.log('fff', err));
 
-    //   } catch (err){
-    //     console.log('444', err)
-    //   } 
-    // createUserWithEmailAndPassword(auth, 'congnv@gmail.com', 'eeeeee')
-    // singInWithPopup(auth, providers).then((data) => {
-
-    // })
-    signInWithRedirect(auth, provider);
+      } catch (err){
+        console.log('err', err)
+      }
 
     }
   }  
