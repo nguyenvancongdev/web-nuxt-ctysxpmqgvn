@@ -46,7 +46,7 @@
           Google</span>
           </div>
         </button>
-
+    <button @click="logou">dang xuat</button>
     <p class="mt-8">Need an account? <a href="#" class="text-blue-500 hover:text-blue-700 font-semibold">Create an
             account</a></p>
 
@@ -58,7 +58,9 @@
 </template>
 <script>
 import { auth,provider } from '@/fb';
-import { GoogleAuthProvider, signInWithRedirect, GithubAuthProvider } from "firebase/auth";
+import { useRoute } from '@nuxtjs/composition-api'
+const router = useRoute()
+import { GoogleAuthProvider,signOut, signInWithRedirect, GithubAuthProvider } from "firebase/auth";
 const providers = new GoogleAuthProvider();
 const providerss = new GithubAuthProvider();
 export default {
@@ -75,6 +77,11 @@ export default {
         console.log('err', err)
       }
 
+    },
+    logou(){
+      signOut(auth).then((res)=>{
+        router.push({ path: "" })
+      }).catch(err)(console.log('rr', err))
     }
   }  
 }
