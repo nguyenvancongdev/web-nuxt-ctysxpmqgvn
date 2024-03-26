@@ -58,7 +58,7 @@
 </template>
 <script>
 import { auth,provider } from '@/fb';
-import { GoogleAuthProvider,signOut,signInWithPopup, signInWithRedirect, getRedirectResult, GithubAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider,getAuth, signOut,signInWithPopup, signInWithRedirect, getRedirectResult, GithubAuthProvider } from "firebase/auth";
 const providers = new GoogleAuthProvider();
 const providerss = new GithubAuthProvider();
 export default {
@@ -66,21 +66,10 @@ export default {
   layout: 'user',
   methods: {
     async handerClick(){
-      // try {
-      //   await signInWithPopup(auth, provider).then(res =>{
-      //     localStorage.setItem('key', 'login thanh cong');
-      //   }).catch(err)(console.log('fff', err));
-
-      // } catch (err){
-      //   console.log('err', err)
-      // }
-      this.auth
-
+      signInWithPopup(auth, provider)
     },
     logou(){
-      signOut(auth).then((res)=>{
-        router.push({ path: "" })
-      }).catch(err)(console.log('rr', err))
+      // 
     }
   }  
 }
