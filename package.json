@@ -21,7 +21,6 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4",
     "postcss": "^8.4.17"
   }
 }
