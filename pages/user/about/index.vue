@@ -1,8 +1,9 @@
 
 <template>
-    <div>demo</div>
+    <div @click="xinchao()">demo</div>
 </template>
 <script>
+import {subject} from '@/rx/sevice'
 export default {
   name: 'IndexPage',
   layout: 'user',
@@ -15,6 +16,14 @@ export default {
     hanh(){
         console.log('day la mixin')
     },
+    xinchao(){
+      subject.next('rrr')
+    }
   },
+  created() {
+    subject.subscribe((data) => {
+      console.log('Subscriber A:', data);
+    });
+  }
 }
 </script>
