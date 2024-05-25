@@ -1,6 +1,6 @@
 <template>
 <v-container class="fill-height" justify="center" align="center">
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="mx-auto" width="400">
       <v-card-title class="headline">Login</v-card-title>
       <v-card-text>
         <v-form @submit.prevent="login">
@@ -20,7 +20,7 @@
           ></v-text-field>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn type="submit" >Login</v-btn>
+            <v-btn type="submit" color='success'>Login</v-btn>
           </v-card-actions>
         </v-form>
       </v-card-text>
